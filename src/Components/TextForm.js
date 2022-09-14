@@ -45,6 +45,7 @@ export default function TextForm(props) {
     document.execCommand("copy");
     document.getSelection().removeAllRanges(); //it will remove selected portion
     props.showAlert("Text Has Been Copied To Clipboard", "success");
+    //navigator.clipboard.writeText(text); can be used alone in place of 43,45,46
   }
   function handleCapitalize() {
     const lower = text.toLowerCase();
@@ -120,7 +121,7 @@ export default function TextForm(props) {
       <div className={`container text-${props.textColor}`}>
         <h1>Your Text Summary</h1>
         {/* we can also use filter method which returns if it is true else not */}
-        <h3>{text.length > 0 ? text.trim().split(" ").length : "0"}:words</h3>
+        <h3>{text.length > 0 ? text.trim().split(/\s+/).length : "0"}:words</h3>
         <h3>{text.length ? text.trim().length : "0"}:letters</h3>
         <h3>
           {text.length > 0 ? 0.008 * text.split(" ").filter((element)=>{return element.length !== 0}).length : "0"}

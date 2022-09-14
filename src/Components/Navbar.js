@@ -52,6 +52,7 @@ export default function Navbar(props) {
             <div className="form-check form-switch">
               <input
                 className={`form-check-input bg-${props.mode==="warning"?'light':'warning'}`}
+                style={{cursor:'pointer'}}
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
@@ -63,6 +64,7 @@ export default function Navbar(props) {
             <div className="form-check form-switch">
               <input
                 className={`form-check-input bg-${props.mode==='primary'?'light':'primary'}`}
+                style={{cursor:'pointer'}}
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
@@ -74,6 +76,7 @@ export default function Navbar(props) {
             <div className="form-check form-switch">
               <input
                 className={`form-check-input bg-${props.mode==='danger'?'light':'danger'}`}
+                style={{cursor:'pointer'}}
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
@@ -85,6 +88,7 @@ export default function Navbar(props) {
             <div className="form-check form-switch">
               <input
                 className={`form-check-input bg-${props.mode==='dark'?'light':'dark'}`}
+                style={{cursor:'pointer'}}
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
